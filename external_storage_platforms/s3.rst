@@ -1,0 +1,138 @@
+.. _s3:
+
+***********************
+Amazon Web Services
+***********************
+
+SQreamDB uses a native Amazon Simple Storage Services (S3) connector for inserting data.
+   
+S3 Bucket File Location
+========================
+
+S3 syntax to be used for specifying a single or multiple file location within an S3 bucket:
+
+.. code-block:: console
+ 
+   s3://bucket_name/path   
+   
+S3 Access 
+======================
+
+A best practice for granting access to AWS S3 is by creating an `Identity and Access Management (IAM) <https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html>`_ user account. If creating an IAM user account is not possible, you may follow AWS guidelines for `using the global configuration object <https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/global-config-object.html>`_ and setting an `AWS region <https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-region.html>`_.
+
+Authentication
+==============
+
+After being granted access to an S3 bucket, you'll be able to execute statements using the ``AWS ID`` and ``AWS SECRET`` parameters for authentication.
+
+Connecting to S3 Using SQreamDB Legacy Configuration File
+=========================================================
+
+
+You may use the following parameters within your SQreamDB legacy configuration file:
+
+.. list-table:: 
+   :widths: auto
+   :header-rows: 1
+   
+   * - Parameter
+     - Description
+     - Parameter Value
+     - Example
+   * - ``AwsEndpointOverride``
+     - Overrides the AWS S3 HTTP endpoint when using Virtual Private Cloud (VPC)
+     - ``URL``
+	   Default: None
+     - .. code-block::
+	 
+			sqream_config_legacy.json:
+			{
+			  ...,	
+			  "AwsEndpointOverride": "https://my.endpoint.local"
+			}		   
+   * - ``AwsObjectAccessStyle``
+     - Enables configuration of S3 object access styles, which determine how you can access and interact with the objects stored in an S3 bucket
+     - ``virtual-host`` or ``path``. Default is ``virtual-host``
+     - .. code-block::
+	 
+			sqream_config_legacy.json:
+			{
+			  ...,
+			  "AwsObjectAccessStyle": "path"
+			}
+
+
+
+Examples
+========
+
+Creating a Foreign Table
+------------------------
+
+Based on the source file's structure, you can create a foreign table with the appropriate structure, and point it to your file as shown in the following example:
+
+.. code-block:: sql
+   
+   CREATE FOREIGN TABLE nba
+   (
+      Name text(40),
+      Team text(40),
+      Number tinyint,
+      Position text(2),
+      Age tinyint,
+      Height text(4),
+      Weight real,
+      College text(40),
+      Salary float
+    )
+    WRAPPER csv_fdw
+    OPTIONS
+      (
+         LOCATION = 's3://sqream-demo-data/nba_players.csv',
+         RECORD_DELIMITER = '\r\n' -- DOS delimited file
+      )
+    ;
+
+In the example above the file format is CSV, and it is stored as an S3 object. If the path is on HDFS, you must change the URI accordingly. Note that the record delimiter is a DOS newline (``\r\n``).
+
+Querying Foreign Tables
+-----------------------
+
+The following shows the data in the foreign table:
+
+.. code-block:: psql
+   
+   t=> SELECT * FROM nba LIMIT 10;
+   name          | team           | number | position | age | height | weight | college           | salary  
+   --------------+----------------+--------+----------+-----+--------+--------+-------------------+---------
+   Avery Bradley | Boston Celtics |      0 | PG       |  25 | 6-2    |    180 | Texas             |  7730337
+   Jae Crowder   | Boston Celtics |     99 | SF       |  25 | 6-6    |    235 | Marquette         |  6796117
+   John Holland  | Boston Celtics |     30 | SG       |  27 | 6-5    |    205 | Boston University |         
+   R.J. Hunter   | Boston Celtics |     28 | SG       |  22 | 6-5    |    185 | Georgia State     |  1148640
+   Jonas Jerebko | Boston Celtics |      8 | PF       |  29 | 6-10   |    231 |                   |  5000000
+   Amir Johnson  | Boston Celtics |     90 | PF       |  29 | 6-9    |    240 |                   | 12000000
+   Jordan Mickey | Boston Celtics |     55 | PF       |  21 | 6-8    |    235 | LSU               |  1170960
+   Kelly Olynyk  | Boston Celtics |     41 | C        |  25 | 7-0    |    238 | Gonzaga           |  2165160
+   Terry Rozier  | Boston Celtics |     12 | PG       |  22 | 6-2    |    190 | Louisville        |  1824360
+   Marcus Smart  | Boston Celtics |     36 | PG       |  22 | 6-4    |    220 | Oklahoma State    |  3431040
+   
+Bulk Loading a File from a Public S3 Bucket
+-------------------------------------------
+
+The ``COPY FROM`` command can also be used to load data without staging it first.
+
+The bucket must be publicly available and objects must be listed.
+
+.. code-block:: postgres
+
+   COPY nba FROM 's3://sqream-demo-data/nba.csv' WITH OFFSET 2 RECORD DELIMITER '\r\n';
+  
+
+Loading Files from an Authenticated S3 Bucket
+---------------------------------------------------
+
+.. code-block:: postgres
+
+   COPY nba FROM 's3://secret-bucket/*.csv' WITH OFFSET 2 RECORD DELIMITER '\r\n' 
+   AWS_ID '12345678'
+   AWS_SECRET 'super_secretive_secret';
