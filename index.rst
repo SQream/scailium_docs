@@ -1,11 +1,11 @@
 .. _index:
 
 *************************
-SQreamDB Documentation
+SCAILIUM Documentation
 *************************
 
 
-SQreamDB is a columnar analytic SQL database management system. SQreamDB supports regular SQL including :ref:`a substantial amount of ANSI SQL<sql_feature_support>`, uses :ref:`serializable transactions<transactions>`, and :ref:`scales horizontally<concurrency_and_scaling_in_sqream>` for concurrent statements. Even a :ref:`basic SQreamDB machine<hardware_guide>` can support tens to hundreds of terabytes of data. SQreamDB easily plugs in to third-party tools like :ref:`Tableau<tableau>` comes with standard SQL client drivers, including :ref:`JDBC<java_jdbc>`, :ref:`ODBC<odbc>`, and :ref:`Python DB-API<pysqream>`.
+SCAILIUM is a columnar analytic SQL database management system. SCAILIUM supports regular SQL including :ref:`a substantial amount of ANSI SQL<sql_feature_support>`, uses :ref:`serializable transactions<transactions>`, and :ref:`scales horizontally<concurrency_and_scaling_in_sqream>` for concurrent statements. Even a :ref:`basic SCAILIUM machine<hardware_guide>` can support tens to hundreds of terabytes of data. SCAILIUM easily plugs in to third-party tools like :ref:`Tableau<tableau>` comes with standard SQL client drivers, including :ref:`JDBC<java_jdbc>`, :ref:`ODBC<odbc>`, and :ref:`Python DB-API<pysqream>`.
 
 
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -13,17 +13,17 @@ SQreamDB is a columnar analytic SQL database management system. SQreamDB support
 +=============================================================+==========================================================================================================================================+
 | **Getting Started**                                                                                                                                                                                    |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`preparing_your_machine_to_install_sqream`             | Set up your local machine according to SQreamDB’s recommended pre-installation configurations.                                           |
+| :ref:`preparing_your_machine_to_install_sqream`             | Set up your local machine according to SCAILIUM’s recommended pre-installation configurations.                                           |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`executing_statements_in_sqream`                       | Provides more information about the available methods for executing statements in SQreamDB.                                              |
+| :ref:`executing_statements_in_sqream`                       | Provides more information about the available methods for executing statements in SCAILIUM.                                              |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`performing_basic_sqream_operations`                   | Provides more information on performing basic operations.                                                                                |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`hardware_guide`                                       | Describes SQreamDB’s mandatory and recommended hardware settings, designed for a technical audience.                                     |
+| :ref:`hardware_guide`                                       | Describes SCAILIUM’s mandatory and recommended hardware settings, designed for a technical audience.                                     |
 +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Installation Guides**                                                                                                                                                                                |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`installing_and_launching_sqream`                      | Refers to SQreamDB’s installation guides.                                                                                                |
+| :ref:`installing_and_launching_sqream`                      | Refers to SCAILIUM’s installation guides.                                                                                                |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`sqream_studio_installation`                           | Refers to all installation guides required for installations related to Studio.                                                          |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -35,11 +35,11 @@ SQreamDB is a columnar analytic SQL database management system. SQreamDB support
 +--------------------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`json`              | :ref:`sqloader_as_a_service`     |                                                                                                                                          |
 +--------------------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| **Connecting to SQreamDB**                                                                                                                                                                             |
+| **Connecting to SCAILIUM**                                                                                                                                                                             |
 +--------------------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`client_platforms`                                     | Describes how to install and connect a variety of third party connection platforms and tools.                                            |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`client_drivers`                                       | Describes how to use the SQreamDB client drivers and client applications with SQreamDB.                                                  |
+| :ref:`client_drivers`                                       | Describes how to use the SCAILIUM client drivers and client applications with SCAILIUM.                                                  |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | **External Storage Platforms**                                                                                                                                                                         |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -55,7 +55,7 @@ SQreamDB is a columnar analytic SQL database management system. SQreamDB support
 
 .. rubric:: Need help?
 
-If you couldn't find what you're looking for, we're always happy to help. Visit `SQreamDB's support portal <https://sqream.atlassian.net/servicedesk/>`_ for additional support.
+If you couldn't find what you're looking for, we're always happy to help. Visit `SCAILIUM's support portal <https://sqream.atlassian.net/servicedesk/>`_ for additional support.
 
 
 .. toctree::
