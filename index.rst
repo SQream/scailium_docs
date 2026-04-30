@@ -5,7 +5,7 @@ SCAILIUM Documentation
 *************************
 
 
-SCAILIUM is a columnar analytic SQL database management system. SCAILIUM supports regular SQL including :ref:`a substantial amount of ANSI SQL<sql_feature_support>`, uses :ref:`serializable transactions<transactions>`, and :ref:`scales horizontally<concurrency_and_scaling_in_sqream>` for concurrent statements. Even a :ref:`basic SCAILIUM machine<hardware_guide>` can support tens to hundreds of terabytes of data. SCAILIUM easily plugs in to third-party tools like :ref:`Tableau<tableau>` comes with standard SQL client drivers, including :ref:`JDBC<java_jdbc>`, :ref:`ODBC<odbc>`, and :ref:`Python DB-API<pysqream>`.
+SCAILIUM is a columnar analytic SQL database management system. SCAILIUM supports regular SQL including :ref:`a substantial amount of ANSI SQL<sql_feature_support>`, uses :ref:`serializable transactions<transactions>`, and :ref:`scales horizontally<concurrency_and_scaling_in_scailium>` for concurrent statements. Even a :ref:`basic SCAILIUM machine<hardware_guide>` can support tens to hundreds of terabytes of data. SCAILIUM easily plugs in to third-party tools like :ref:`Tableau<tableau>` comes with standard SQL client drivers, including :ref:`JDBC<java_jdbc>`, :ref:`ODBC<odbc>`, and :ref:`Python DB-API<pysqream>`.
 
 
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
