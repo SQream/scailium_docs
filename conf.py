@@ -26,9 +26,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # -- Project information -----------------------------------------------------
 
-project = 'SQreamDB'
-copyright = '2024 SQreamDB'
-author = 'SQreamDB Documentation'
+project = 'SCAILIUM'
+copyright = '2026 SCAILIUM'
+author = 'SCAILIUM Documentation'
 
 
 # The full version, including alpha/beta/rc tags
@@ -75,7 +75,7 @@ html_css_files = [
     'css/custom.css', # Relative to the _static path
 ]
 
-html_logo = '_static/images/SQream_logo_without background-15.png'
+html_logo = '_static/images/SCAILIUM_logo_without_background.png'
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
@@ -94,10 +94,10 @@ html_show_copyright = True
 # RTD theme specifics
 
 html_theme_options = {
-   'logo_only': True # Hide "SQream DB" title and only show logo
+   'logo_only': True # Hide "SCAILIUM DB" title and only show logo
    , 'display_version': True # Display version at the top
    , 'style_external_links': True # Show little icon next to external links
-   , 'style_nav_header_background': '#133148' # SQream teal
+   , 'style_nav_header_background': '#133148' # SCAILIUM teal
    , 'navigation_depth': -1
    , 'collapse_navigation': False
    , 'titles_only': True
