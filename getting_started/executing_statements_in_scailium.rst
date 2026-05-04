@@ -1,8 +1,8 @@
 .. _executing_statements_in_scailium:
 
-********************************
+****************************
 Executing Statements in SCAILIUM
-********************************
+****************************
 
 You may choose one of the following tools for executing statements in SCAILIUM:
 
