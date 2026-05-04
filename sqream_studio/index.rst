@@ -1,4 +1,4 @@
-.. _sqream_studio_:
+.. _scailium_studio_:
 
 ********************************
 Acceleration Studio
