@@ -1,7 +1,7 @@
-.. _installing_sqream_with_binary:
+.. _installing_scailium_with_binary:
 
 *********************************************
-Installing SQream Using Binary Packages
+Installing SCAILIUM Using Binary Packages
 *********************************************
 
 This procedure describes how to install SQream using Binary packages and must be done on all servers.
