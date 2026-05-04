@@ -13,7 +13,7 @@ The **Getting Started** page describes the following things you need to start us
    preparing_your_machine_to_install_scailium
    installing_scailium
    executing_statements_in_scailium
-   performing_basic_sqream_operations
+   performing_basic_scailium_operations
    hardware_guide
    non_production_hardware_guide
    non_production_hardware_guide_scailium
