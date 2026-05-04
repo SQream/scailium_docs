@@ -15,5 +15,4 @@ The **Getting Started** page describes the following things you need to start us
    executing_statements_in_scailium
    performing_basic_scailium_operations
    hardware_guide
-   non_production_hardware_guide
-   non_production_hardware_guide_scailium
+   non_production_hardware_guide  
