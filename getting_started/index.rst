@@ -4,7 +4,7 @@
 Getting Started
 ***************
 
-The **Getting Started** page describes the following things you need to start using SQreamDB:
+The **Getting Started** page describes the following things you need to start using SCAILIUM:
 
 .. toctree::
    :maxdepth: 1
