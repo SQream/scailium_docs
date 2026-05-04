@@ -11,7 +11,7 @@ The **Getting Started** page describes the following things you need to start us
    :glob:
 
    preparing_your_machine_to_install_scailium
-   installing_sqream
+   installing_scailium
    executing_statements_in_sqream
    performing_basic_sqream_operations
    hardware_guide
