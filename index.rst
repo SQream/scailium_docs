@@ -13,11 +13,11 @@ SCAILIUM is a columnar analytic SQL database management system. SCAILIUM support
 +=============================================================+==========================================================================================================================================+
 | **Getting Started**                                                                                                                                                                                    |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`preparing_your_machine_to_install_sqream`             | Set up your local machine according to SCAILIUM’s recommended pre-installation configurations.                                           |
+| :ref:`preparing_your_machine_to_install_scailium`             | Set up your local machine according to SCAILIUM’s recommended pre-installation configurations.                                           |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`executing_statements_in_sqream`                       | Provides more information about the available methods for executing statements in SCAILIUM.                                              |
+| :ref:`executing_statements_in_scailium`                       | Provides more information about the available methods for executing statements in SCAILIUM.                                              |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| :ref:`performing_basic_sqream_operations`                   | Provides more information on performing basic operations.                                                                                |
+| :ref:`performing_basic_scailium_operations`                   | Provides more information on performing basic operations.                                                                                |
 +-------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`hardware_guide`                                       | Describes SCAILIUM’s mandatory and recommended hardware settings, designed for a technical audience.                                     |
 +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
