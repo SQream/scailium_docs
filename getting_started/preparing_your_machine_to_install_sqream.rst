@@ -1,12 +1,12 @@
 .. _preparing_your_machine_to_install_sqream:
 
 *******************************************
-Preparing Your Machine to Install SQreamDB
+Preparing Your Machine to Install SCAILIUM
 *******************************************
 
-To prepare your machine to install SQreamDB, do the following:
+To prepare your machine to install SCAILIUM, do the following:
 
- * Set up your local machine according to SQreamDB's recommended pre-installation configurations.
+ * Set up your local machine according to SCAILIUM's recommended pre-installation configurations.
    
  * Verify you have an NVIDIA-capable server, either on-premise or on supported cloud platforms: 
 
@@ -16,7 +16,7 @@ To prepare your machine to install SQreamDB, do the following:
 	 
  * Verify that you have the following:
  
-   * An NVIDIA GPU - SQreamDB recommends using a Tesla GPU.
+   * An NVIDIA GPU - SCAILIUM recommends using a Tesla GPU.
  
 
    * An SSH connection to your server.
@@ -25,7 +25,7 @@ To prepare your machine to install SQreamDB, do the following:
    * SUDO permissions for installation and configuration purposes.
  
  
-   * A SQreamDB license - Contact `SQreamDB Support <https://sqream.atlassian.net/servicedesk/customer/portal/2/group/8/create/26>`_ for your license key.
+   * A SCAILIUM license - Contact `SCAILIUM Support <https://sqream.atlassian.net/servicedesk/customer/portal/2/group/8/create/26>`_ for your license key.
 For more information, see the following:
 
 * :ref:`pre-installation_configurations`
