@@ -10,5 +10,5 @@ Installing SCAILIUM
    
    * - Method
      - Description
-   * - :ref:`Installing SCAILIUM natively <installing_scailiumm_with_binary>`
+   * - :ref:`Installing SCAILIUM natively <installing_scailium_with_binary>`
      - Describes installing SCAILIUM using binary packages provided by SCAILIUM
