@@ -4,7 +4,7 @@
 Pre-Installation Configuration
 ******************************
 
-Before installing SQreamDB, it is essential that you tune your system for better performance and stability.
+Before installing SCAILIUM, it is essential that you tune your system for better performance and stability.
 
 .. contents:: 
    :local:
@@ -70,7 +70,7 @@ If any doubt arises, consult the documentation for your server or your hardware 
      - Setting a higher voltage for DIMMs may increase performance.		 
    * - **Memory Operating Mode**
      - **Optimizer Mode**, **Disable Node Interleaving**, **Auto Memory Operating Voltage**
-     - Memory Operating Mode is tuned for performance in **Optimizer** mode. Other modes may improve reliability, but reduce performance. **Node Interleaving** should be disabled because enabling it interleaves the memory between memory nodes, which harms NUMA-aware applications such as SQreamDB.	 
+     - Memory Operating Mode is tuned for performance in **Optimizer** mode. Other modes may improve reliability, but reduce performance. **Node Interleaving** should be disabled because enabling it interleaves the memory between memory nodes, which harms NUMA-aware applications such as SCAILIUM.	 
    * - **HPe**: **Memory power savings mode**
      - **Maximum performance**
      - This setting configures several memory parameters to optimize the performance of memory sub-systems. The default setting is **Balanced**.	 
@@ -93,7 +93,7 @@ Before You Begin
 
 * Once the BIOS settings have been set, you must install the operating system.
 
-* A SQreamDB installation requires RHEL8.8/8.9
+* A SCAILIUM installation requires RHEL8.8/8.9
 
 * Verify the exact RHEL8 version with your storage vendor to avoid driver incompatibility.
 
@@ -188,7 +188,7 @@ The steps below guide you on creating a ``sqream`` user with an exemplary ID of 
 Setting Up A Locale
 -----------------------
 
-SQreamDB enables you to set up a locale using your own location. To find out your current time-zone, run the ``timedatectl list-timezones`` command.
+SCAILIUM enables you to set up a locale using your own location. To find out your current time-zone, run the ``timedatectl list-timezones`` command.
 
 Set the language of the locale:
 
@@ -236,7 +236,7 @@ Installing Recommended Tools
 
       sudo dnf install bash-completion.noarch vim-enhanced vim-common net-tools iotop htop psmisc screen xfsprogs wget yum-utils dos2unix
 	  
-**For SQreamDB version 4.4 or newer, install Python 3.9.13.**
+**For SCAILIUM version 4.4 or newer, install Python 3.9.13.**
   
 1. Download the Python 3.9.13 source code tarball file from the following URL into the ``/home/sqream`` directory:
 
@@ -285,7 +285,7 @@ Installing Recommended Tools
 Installing NodeJS 
 ^^^^^^^^^^^^^^^^^^
 
-NodeJS is necessary only when the UI runs on the same server as SqreamDB. If not, you can skip this step.
+NodeJS is necessary only when the UI runs on the same server as SCAILIUM. If not, you can skip this step.
 
 1. Download the NodeJS source code tarball file from the following URL into the ``/home/sqream`` directory:
 
@@ -446,7 +446,7 @@ Configuring the Firewall
 
 The example in this section shows the open ports for four ``sqreamd`` sessions. If more than four are required, open the required ports as needed. Port 8080 in the example below is a new UI port.
 
-The ports listed below are required, and the same logic applies to all additional SQreamDB Worker ports.
+The ports listed below are required, and the same logic applies to all additional SCAILIUM Worker ports.
 
 .. list-table::
    :widths: auto
@@ -459,19 +459,19 @@ The ports listed below are required, and the same logic applies to all additiona
    * - 443
      - UI over HTTPS ( requires nginx installation )
    * - 3105
-     - SqreamDB metadataserver service
+     - SCAILIUM metadataserver service
    * - 3108
-     - SqreamDB serverpicker service
+     - SCAILIUM serverpicker service
    * - 3109
-     - SqreamDB serverpicker service over ssl
+     - SCAILIUM serverpicker service over ssl
    * - 5000
-     - SqreamDB first worker default port
+     - SCAILIUM first worker default port
    * - 5100
-     - SqreamDB first worker over ssl default port
+     - SCAILIUM first worker over ssl default port
    * - 5001
-     - SqreamDB second worker default port
+     - SCAILIUM second worker default port
    * - 5101
-     - SqreamDB second worker over ssl default port
+     - SCAILIUM second worker over ssl default port
 
 1. Start the service and enable FirewallID on boot:
 
@@ -643,7 +643,7 @@ The current recommendation is for CUDA 12.3.2.
    :local:
    :depth: 1
   
-For questions related to which driver to install, contact `SqreamDB support <https://sqream.atlassian.net/servicedesk/customer/portal/2/group/8/create/26>`_.
+For questions related to which driver to install, contact `SCAILIUM support <https://sqream.atlassian.net/servicedesk/customer/portal/2/group/8/create/26>`_.
 
 Installing the CUDA Driver from the Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -764,7 +764,7 @@ Tune Up NVIDIA Performance when Driver Installed from the Runfile
 Enabling Core Dumps
 ===================
 
-While this procedure is optional, SQreamDB recommends that core dumps be enabled. Note that the default ``abrt`` format is not ``gdb`` compatible, and that for SQreamDB support to be able to analyze your core dumps, they must be ``gdb`` compatible.
+While this procedure is optional, SCAILIUM recommends that core dumps be enabled. Note that the default ``abrt`` format is not ``gdb`` compatible, and that for SCAILIUM support to be able to analyze your core dumps, they must be ``gdb`` compatible.
 
 .. contents:: 
    :local:
@@ -865,19 +865,19 @@ Setting the Output Directory on the ``/etc/sysctl.conf`` File
 Verifying that the Core Dumps Work 
 ----------------------------------
 
-You can verify that the core dumps work only after installing and running SQreamDB. This causes the server to crash and a new ``core.xxx`` file to be included in the folder that is written in ``/etc/sysctl.conf``.
+You can verify that the core dumps work only after installing and running SCAILIUM. This causes the server to crash and a new ``core.xxx`` file to be included in the folder that is written in ``/etc/sysctl.conf``.
 
-1. Stop and restart all SQreamDB services.
+1. Stop and restart all SCAILIUM services.
 
     ::
 
-2. Connect to SQreamDB with ClientCmd and run the following command:
+2. Connect to SCAILIUM with ClientCmd and run the following command:
 
   .. code-block:: console
 
       select abort_server();
    
-Verify Your SQreamDB Installation
+Verify Your SCAILIUM Installation
 ------------------------------------
 
 1. Verify that the ``sqream`` user exists and has the same ID on all cluster servers.

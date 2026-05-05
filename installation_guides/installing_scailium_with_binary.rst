@@ -4,11 +4,11 @@
 Installing SCAILIUM Using Binary Packages
 *********************************************
 
-This procedure describes how to install SQream using Binary packages and must be done on all servers.
+This procedure describes how to install SCAILIUM using Binary packages and must be done on all servers.
 
-**To install SQream using Binary packages:**
+**To install SCAILIUM using Binary packages:**
 
-1. Copy the SQream package to the **/home/sqream** directory for the current version:
+1. Copy the SCAILIUM package to the **/home/sqream** directory for the current version:
 
    .. code-block:: console
    
