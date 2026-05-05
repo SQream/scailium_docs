@@ -10,7 +10,7 @@ The **Getting Started** page describes the following things you need to start us
    :maxdepth: 1
    :glob:
 
-   hardware_guide
+   hardware_guide1111
    preparing_your_machine_to_install_scailium
    installing_scailium
    executing_statements_in_scailium
