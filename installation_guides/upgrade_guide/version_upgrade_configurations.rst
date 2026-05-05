@@ -10,7 +10,7 @@ Upgrade-Related Configuration Changes
    :widths: auto
    :header-rows: 1
       
-   * - SQreamDB Version
+   * - SCAILIUM Version
      - Storage Version
      - Configurations and Changes
    * - 4.4
@@ -39,7 +39,7 @@ Upgrade-Related Configuration Changes
 	   
 	   Configuration:
 	   
-	   * :ref:`Access control permissions<access_control_permissions>` in SQreamDB have been expanded. Learn how to reconfigure access control permissions when :ref:`upgrading from version 4.2<upgrade_to_4.3>` 
+	   * :ref:`Access control permissions<access_control_permissions>` in SCAILIUM have been expanded. Learn how to reconfigure access control permissions when :ref:`upgrading from version 4.2<upgrade_to_4.3>` 
    * - 4.1
      - 45
      - New Releases:
@@ -76,6 +76,6 @@ Upgrade-Related Configuration Changes
      - 40
      - * In SQream version 2022.1 the ``VARCHAR`` data type has been deprecated and replaced with ``TEXT``. SQream will maintain ``VARCHAR`` in all previous versions until completing the migration to ``TEXT``, at which point it will be deprecated in all earlier versions. SQream also provides an automated and secure tool to facilitate and simplify migration from ``VARCHAR`` to ``TEXT``.
 
-       * If you are using an earlier version of SQreamDB, see the :ref:`Using Legacy String Literals<use_legacy_string_literals>` configuration flag.
+       * If you are using an earlier version of SCAILIUM, see the :ref:`Using Legacy String Literals<use_legacy_string_literals>` configuration flag.
 
 

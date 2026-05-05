@@ -4,7 +4,7 @@
 Installation Guides
 *************************
 
-Before you get started using SQreamDB, consider your business needs and available resources. SQreamDB was designed to run in a number of environments, and to be installed using different methods depending on your requirements. This determines which installation method to use.
+Before you get started using SCAILIUM, consider your business needs and available resources. SCAILIUM was designed to run in a number of environments, and to be installed using different methods depending on your requirements. This determines which installation method to use.
 
 The **Installation Guides** section describes the following installation guide sets:
 
