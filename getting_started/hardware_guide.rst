@@ -4,13 +4,13 @@
 Hardware Guide
 **************
 
-The **Hardware Guide** describes the SQreamDB reference architecture, emphasizing the benefits to the technical audience, and provides guidance for end-users on selecting the right configuration for a SQreamDB installation.
+The **Hardware Guide** describes the SCAILIUM reference architecture, emphasizing the benefits to the technical audience, and provides guidance for end-users on selecting the right configuration for a SCAILIUM installation.
 
 .. rubric:: Need help?
 
-This page is intended as a "reference" to suggested hardware. However, different workloads require different solution sizes. SQreamDB's experienced customer support has the experience to advise on these matters to ensure the best experience.
+This page is intended as a "reference" to suggested hardware. However, different workloads require different solution sizes. SCAILIUM's experienced customer support has the experience to advise on these matters to ensure the best experience.
 
-Visit `SQreamDB's support portal <https://sqream.atlassian.net/servicedesk/customer/portals>`_ for additional support.
+Visit `SCAILIUM's support portal <https://sqream.atlassian.net/servicedesk/customer/portals>`_ for additional support.
 
 .. contents:: 
    :local:
@@ -20,9 +20,9 @@ Visit `SQreamDB's support portal <https://sqream.atlassian.net/servicedesk/custo
 Cluster Architectures
 =====================
 
-SQreamDB recommends rackmount servers by server manufacturers Dell, Lenovo, HP, Cisco, Supermicro, IBM, and others.
+SCAILIUM recommends rackmount servers by server manufacturers Dell, Lenovo, HP, Cisco, Supermicro, IBM, and others.
 
-A typical SQreamDB cluster includes one or more nodes, consisting of:
+A typical SCAILIUM cluster includes one or more nodes, consisting of:
 
 * Two-socket enterprise processors, such as Intel® Xeon® Gold processors or the IBM® POWER9 processors, providing the high performance required for compute-bound database workloads.
 
@@ -33,7 +33,7 @@ A typical SQreamDB cluster includes one or more nodes, consisting of:
 Single-Node Cluster
 -------------------
 
-A single-node SQreamDB cluster can handle between 1 and 8 concurrent users, with up to 1PB of data storage (when connected via NAS).
+A single-node SCAILIUM cluster can handle between 1 and 8 concurrent users, with up to 1PB of data storage (when connected via NAS).
 
 An average single-node cluster can be a rackmount server or workstation, containing the following components:
 
@@ -64,18 +64,18 @@ An average single-node cluster can be a rackmount server or workstation, contain
 
 .. note:: If you are using internal storage, your volumes must be formatted as xfs.
 
-In this system configuration, SQreamDB can store about 100TB of raw data (assuming an average compression ratio and ~30TB of usable raw storage).
+In this system configuration, SCAILIUM can store about 100TB of raw data (assuming an average compression ratio and ~30TB of usable raw storage).
 
-If a NAS is used, the 10x SSD drives can be omitted, but SQreamDB recommends 2TB of local spool space on SSD or NVMe drives.
+If a NAS is used, the 10x SSD drives can be omitted, but SCAILIUM recommends 2TB of local spool space on SSD or NVMe drives.
 
 Multi-Node Cluster
 ------------------
 
-Multi-node clusters can handle any number of concurrent users. A typical SQreamDB cluster relies on a minimum of two GPU-enabled servers and shared storage connected over a network fabric, such as InfiniBand EDR, 40GbE, or 100GbE.
+Multi-node clusters can handle any number of concurrent users. A typical SCAILIUM cluster relies on a minimum of two GPU-enabled servers and shared storage connected over a network fabric, such as InfiniBand EDR, 40GbE, or 100GbE.
 
 The **Multi-Node Cluster Examples** section describes the following specifications: 
 
-The following table shows SQreamDB's recommended hardware specifications:
+The following table shows SCAILIUM's recommended hardware specifications:
 
 .. list-table::
    :widths: 15 65
@@ -109,7 +109,7 @@ The following table shows SQreamDB's recommended hardware specifications:
 Metadata Server
 ---------------
    
-The following table shows SQreamDB's recommended metadata server specifications:
+The following table shows SCAILIUM's recommended metadata server specifications:
 
 .. list-table::
    :widths: 15 90
@@ -132,12 +132,12 @@ The following table shows SQreamDB's recommended metadata server specifications:
    * - Operating System
      - Red Hat Enterprise Linux v8.9 or Amazon Linux 2
 
-.. note:: With a NAS connected over GPFS, Lustre, Weka, or VAST, each SQreamDB worker can read data at 5GB/s or more.
+.. note:: With a NAS connected over GPFS, Lustre, Weka, or VAST, each SCAILIUM worker can read data at 5GB/s or more.
 
-SQreamDB Studio Server
+SCAILIUM Studio Server
 ----------------------
 
-The following table shows SQreamDB's recommended Studio server specifications:
+The following table shows SCAILIUM's recommended Studio server specifications:
 
 .. list-table::
    :widths: auto
@@ -161,18 +161,18 @@ Cluster Design Considerations
 
 This section describes the following cluster design considerations:
 
-* In a SQreamDB installation, the storage and computing are logically separated. While they may reside on the same machine in a standalone installation, they may also reside on different hosts, providing additional flexibility and scalability.
+* In a SCAILIUM installation, the storage and computing are logically separated. While they may reside on the same machine in a standalone installation, they may also reside on different hosts, providing additional flexibility and scalability.
 
-* SQreamDB uses all resources in a machine, including CPU, RAM, and GPU to deliver the best performance. At least 256GB of RAM per physical GPU is recommended.
+* SCAILIUM uses all resources in a machine, including CPU, RAM, and GPU to deliver the best performance. At least 256GB of RAM per physical GPU is recommended.
 
-* Local disk space is required for good temporary spooling performance, particularly when performing intensive operations exceeding the available RAM, such as sorting. SQreamDB recommends an SSD or NVMe drive in RAID0 configuration with about twice the RAM size available for temporary storage. This can be shared with the operating system drive if necessary.
+* Local disk space is required for good temporary spooling performance, particularly when performing intensive operations exceeding the available RAM, such as sorting. SCAILIUM recommends an SSD or NVMe drive in RAID0 configuration with about twice the RAM size available for temporary storage. This can be shared with the operating system drive if necessary.
 
-* When using NAS devices, SQreamDB recommends approximately 5GB/s of burst throughput from storage per GPU.
+* When using NAS devices, SCAILIUM recommends approximately 5GB/s of burst throughput from storage per GPU.
 
 Balancing Cost and Performance
 ------------------------------
 
-Prior to designing and deploying a SQreamDB cluster, a number of important factors must be considered. 
+Prior to designing and deploying a SCAILIUM cluster, a number of important factors must be considered. 
 
 The **Balancing Cost and Performance** section provides a breakdown of deployment details to ensure that this installation exceeds or meets the stated requirements. The rationale provided includes the necessary information for modifying configurations to suit the customer use-case scenario, as shown in the following table:
 
@@ -200,26 +200,26 @@ The **Balancing Cost and Performance** section provides a breakdown of deploymen
 CPU Compute
 -----------
 
-SQreamDB relies on multi-core Intel Gold Xeon processors or IBM POWER9 processors and recommends a dual-socket machine populated with CPUs with 18C/36HT or better. While a higher core count may not necessarily affect query performance, more cores will enable higher concurrency and better load performance.
+SCAILIUM relies on multi-core Intel Gold Xeon processors or IBM POWER9 processors and recommends a dual-socket machine populated with CPUs with 18C/36HT or better. While a higher core count may not necessarily affect query performance, more cores will enable higher concurrency and better load performance.
 
 GPU Compute and RAM
 -------------------
 
-The NVIDIA Tesla range of high-throughput GPU accelerators provides the best performance for enterprise environments. Most cards have ECC memory, which is crucial for delivering correct results every time. SQreamDB recommends the  NVIDIA Tesla A100 80GB GPU for the best performance and highest concurrent user support.
+The NVIDIA Tesla range of high-throughput GPU accelerators provides the best performance for enterprise environments. Most cards have ECC memory, which is crucial for delivering correct results every time. SCAILIUM recommends the  NVIDIA Tesla A100 80GB GPU for the best performance and highest concurrent user support.
 
 GPU RAM, sometimes called GRAM or VRAM, is used for processing queries. It is possible to select GPUs with less RAM. However, the smaller GPU RAM results in reduced concurrency, as the GPU RAM is used extensively in operations like JOINs, ORDER BY, GROUP BY, and all SQL transforms.
 
 RAM
 ---
 
-SQreamDB requires using **Error-Correcting Code memory (ECC)**, standard on most enterprise servers. Large amounts of memory are required for improved performance for heavy external operations, such as sorting and joining.
+SCAILIUM requires using **Error-Correcting Code memory (ECC)**, standard on most enterprise servers. Large amounts of memory are required for improved performance for heavy external operations, such as sorting and joining.
 
-SQreamDB recommends at least 256GB of RAM per GPU on your machine. 
+SCAILIUM recommends at least 256GB of RAM per GPU on your machine. 
 
 Operating System
 ----------------
 
-SQreamDB can run on the following 64-bit Linux operating systems:
+SCAILIUM can run on the following 64-bit Linux operating systems:
 
    * Red Hat Enterprise Linux v8.9
    * Amazon Linux 2
@@ -228,6 +228,6 @@ SQreamDB can run on the following 64-bit Linux operating systems:
 Storage
 -------
 
-For clustered scale-out installations, SQreamDB relies on NAS storage. For stand-alone installations, SQreamDB relies on redundant disk configurations, such as RAID 5, 6, or 10. These RAID configurations replicate blocks of data between disks to avoid data loss or system unavailability. 
+For clustered scale-out installations, SCAILIUM relies on NAS storage. For stand-alone installations, SCAILIUM relies on redundant disk configurations, such as RAID 5, 6, or 10. These RAID configurations replicate blocks of data between disks to avoid data loss or system unavailability. 
 
-SQreamDB recommends using enterprise-grade SAS SSD or NVMe drives. For a 32-user configuration, the number of GPUs should roughly match the number of users. SQreamDB recommends 1 Tesla A100 / H100 or L40S GPU per 2 users, for full, uninterrupted dedicated access.
+SCAILIUM recommends using enterprise-grade SAS SSD or NVMe drives. For a 32-user configuration, the number of GPUs should roughly match the number of users. SCAILIUM recommends 1 Tesla A100 / H100 or L40S GPU per 2 users, for full, uninterrupted dedicated access.
