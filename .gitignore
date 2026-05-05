@@ -9,3 +9,12 @@ Icon?
 Thumbs.db
 .vs
 _static/images/SQream_logo_without background-15 - Copy (2).png
+_static/images/SQream_logo_without background-15 - Copy.png
+feature_guides/concurrency_and_scaling_in_sqream - Copy.rst
+feature_guides/transactions - Copy.rst
+getting_started/executing_statements_in_sqream - Copy.rst
+getting_started/hardware_guide - Copy.rst
+getting_started/installing_sqream - Copy.rst
+getting_started/index - Copy.rst
+getting_started/non_production_hardware_guide - Copy.rst
+*- copy*
